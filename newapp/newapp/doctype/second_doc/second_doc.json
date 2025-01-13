@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:first_name",
+ "creation": "2025-01-12 22:50:19.527152",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1vih",
+  "amended_from",
+  "first_name",
+  "phone",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1vih",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "second doc",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "first doc",
+   "unique": 1
+  },
+  {
+   "fetch_from": "first_name.phone",
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone no.",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "first_name.address",
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-13 19:56:44.828429",
+ "modified_by": "Administrator",
+ "module": "Newapp",
+ "name": "second doc",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
